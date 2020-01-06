@@ -1,3 +1,7 @@
 .controlledHeight{
     max-height: 50px;
 }
+
+.pointer{
+    cursor:pointer; 
+}
