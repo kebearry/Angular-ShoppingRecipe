@@ -24,13 +24,17 @@ export class RecipeService {
             ])
     ]; //holds recipe object, private so cannot get array from the outside
 
-    constructor(private slService: ShoppingListService){}
+    constructor(private slService: ShoppingListService) { }
 
     getRecipes() {
         return this.recipes.slice(); //to access the copy only
     }
 
-    addIngredientsToSl(ingredients: Ingredient[]){
+    getRecipe(id: number) {
+        return this.recipes.slice()[id];
+    }
+
+    addIngredientsToSl(ingredients: Ingredient[]) {
         this.slService.addIngredients(ingredients)
     }
 }
